@@ -1,63 +1,53 @@
 "use client";
 
-import CtaButton from "@/components/cta-button";
 import Container from "@/components/container";
 import Reveal from "@/components/reveal";
 import SectionTitle from "@/components/section-title";
-import Image from "next/image";
-
-const events = ["Birthday Parties", "Kitty Parties", "Corporate Gatherings", "Small Weddings"];
-
-const gallery = [
-  "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=900&q=80",
-];
 
 export default function EventsSection() {
   return (
-    <section id="events" className="bg-[#09090b] py-20 sm:py-24">
+    <section id="location" className="bg-[#09090b] py-20 sm:py-24">
       <Container>
         <Reveal>
           <SectionTitle
-            eyebrow="Banquet & Events"
-            title="A flexible banquet space for milestone moments"
-            description="Celebrate birthdays, kitty parties, corporate get-togethers, and elegant small weddings in one premium venue."
+            eyebrow="Location"
+            title="Prime location in Bidhannagar, Durgapur"
+            description="Well-connected address with access to schools, healthcare, shopping, and major roads."
           />
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="mb-8 flex flex-wrap gap-3">
-            {events.map((event) => (
-              <span
-                key={event}
-                className="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.15em] text-zinc-300"
+        <div className="grid gap-6 lg:grid-cols-2">
+          <Reveal delay={0.1}>
+            <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+              <p className="text-sm uppercase tracking-[0.15em] text-zinc-400">Address</p>
+              <p className="mt-3 text-lg text-zinc-100">
+                A-17, Meghmallar Sarani, Bidhannagar, Durgapur, West Bengal 713212
+              </p>
+              <p className="mt-6 text-sm uppercase tracking-[0.15em] text-zinc-400">Area Highlight</p>
+              <p className="mt-3 text-zinc-300">Prime location in Bidhannagar, Durgapur</p>
+              <a
+                href="https://maps.google.com/?q=A-17%2C+Meghmallar+Sarani%2C+Bidhannagar%2C+Durgapur%2C+West+Bengal+713212"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-white/40 hover:bg-white/10"
               >
-                {event}
-              </span>
-            ))}
-          </div>
-        </Reveal>
+                Open in Google Maps
+              </a>
+            </div>
+          </Reveal>
 
-        <div className="grid gap-4 md:grid-cols-3">
-          {gallery.map((image, index) => (
-            <Reveal key={image} delay={index * 0.1}>
-              <div className="group overflow-hidden rounded-2xl border border-white/10">
-                <Image
-                  src={image}
-                  alt="Minari event setup"
-                  width={900}
-                  height={600}
-                  className="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
-                />
-              </div>
-            </Reveal>
-          ))}
+          <Reveal delay={0.2}>
+            <div className="overflow-hidden rounded-2xl border border-white/10">
+              <iframe
+                title="ANURAG GROUP Location"
+                src="https://www.google.com/maps?q=A-17%2C%20Meghmallar%20Sarani%2C%20Bidhannagar%2C%20Durgapur%2C%20West%20Bengal%20713212&output=embed"
+                className="h-[360px] w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </Reveal>
         </div>
-
-        <Reveal delay={0.3} className="mt-10">
-          <CtaButton href="#contact">Book Your Event</CtaButton>
-        </Reveal>
       </Container>
     </section>
   );

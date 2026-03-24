@@ -6,35 +6,38 @@ import SectionTitle from "@/components/section-title";
 
 const testimonials = [
   {
-    quote: "Great ambience, rich flavors, and highly cooperative staff for birthday events.",
-    name: "Aman S.",
+    quote:
+      "The apartment layout is practical, premium, and perfect for families. Site visit experience was smooth.",
+    name: "Sourav M.",
   },
   {
-    quote: "Best place in Dhanbad for kitty parties. Food quality and service are consistently good.",
-    name: "Neha R.",
+    quote:
+      "Great location in Bidhannagar with easy connectivity. The team explained all details transparently.",
+    name: "Priyanka D.",
   },
   {
-    quote: "Banquet hall setup was elegant and well-managed for our family celebration.",
-    name: "Rahul K.",
+    quote:
+      "Quality construction and reasonable pricing made ANURAG GROUP our first choice in Durgapur.",
+    name: "Arijit B.",
   },
 ];
 
 export default function ReviewsSection() {
   return (
-    <section className="bg-[#09090b] py-20 sm:py-24">
+    <section id="reviews" className="bg-[#09090b] py-20 sm:py-24">
       <Container>
         <Reveal>
           <SectionTitle
             eyebrow="Reviews"
-            title="Loved by families, friends, and event hosts"
-            description="4.7 rating with 400+ reviews across dining and celebration experiences."
+            title="Trusted by homebuyers in Durgapur"
+            description="A strong reputation built on quality, transparency, and customer satisfaction."
           />
         </Reveal>
 
         <Reveal delay={0.1}>
           <div className="mb-8 inline-flex items-center gap-3 rounded-2xl border border-amber-300/50 bg-amber-300/10 px-5 py-3">
-            <span className="font-display text-3xl text-amber-300">4.7</span>
-            <span className="text-zinc-200">⭐ Average Rating (400+ reviews)</span>
+            <span className="font-display text-3xl text-amber-300">4.6</span>
+            <span className="text-zinc-200">⭐ Average Rating (38 reviews)</span>
           </div>
         </Reveal>
 

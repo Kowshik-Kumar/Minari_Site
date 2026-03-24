@@ -6,11 +6,11 @@ import { useState } from "react";
 import Container from "@/components/container";
 
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Menu", href: "/menu" },
-  { label: "Events", href: "/event" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Details", href: "/details" },
+  { label: "Location", href: "/location" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Why Us", href: "/why-us" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -23,7 +23,7 @@ export default function SiteNavbar() {
         <div className="rounded-2xl border border-white/10 bg-zinc-950/70 px-5 py-3 backdrop-blur-xl">
           <div className="flex items-center justify-between">
             <Link href="/" className="font-display text-xl text-white sm:text-2xl">
-              Minari
+              ANURAG GROUP
             </Link>
 
             <nav className="hidden items-center gap-8 md:flex">
@@ -46,6 +46,13 @@ export default function SiteNavbar() {
             >
               {open ? "Close" : "Menu"}
             </button>
+
+            <a
+              href="tel:09333794182"
+              className="hidden rounded-full bg-amber-300 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-zinc-950 transition hover:bg-amber-200 md:inline-flex"
+            >
+              Call Now
+            </a>
           </div>
         </div>
       </Container>

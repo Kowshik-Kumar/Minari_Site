@@ -14,19 +14,19 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Minari - Restaurant & Banquet Hall",
+  title: "ANURAG GROUP | Premium Residential Apartments in Durgapur",
   description:
-    "Minari - Restaurant & Banquet Hall in Dhanbad. Best Restaurant in Dhanbad | Kitty Party & Birthday Party Organizer.",
+    "ANURAG GROUP offers premium residential apartments in Bidhannagar, Durgapur. Book your site visit today.",
   keywords: [
-    "Minari Dhanbad",
-    "Restaurant in Dhanbad",
-    "Banquet Hall Dhanbad",
-    "Birthday party venue",
-    "Kitty party organizer",
+    "ANURAG GROUP",
+    "Durgapur real estate",
+    "residential apartments Durgapur",
+    "Bidhannagar apartments",
+    "property in West Bengal",
   ],
   openGraph: {
-    title: "Minari - Restaurant & Banquet Hall",
-    description: "Premium dining and event hosting in Dhanbad.",
+    title: "ANURAG GROUP | Premium Residential Apartments in Durgapur",
+    description: "Luxury apartments by ANURAG GROUP in a prime Bidhannagar location.",
     type: "website",
   },
 };

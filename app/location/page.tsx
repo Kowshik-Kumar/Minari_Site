@@ -3,19 +3,21 @@ import ConversionWidgets from "@/components/conversion-widgets";
 import PageHero from "@/components/page-hero";
 import SiteFooter from "@/footer/site-footer";
 import SiteNavbar from "@/navbar/site-navbar";
+import EventsSection from "@/sections/events-section";
 
-export default function ContactPage() {
+export default function LocationPage() {
   return (
     <div className="bg-[#09090b]">
       <SiteNavbar />
       <main className="pb-24">
         <PageHero
-          eyebrow="Contact"
-          title="Connect with ANURAG GROUP"
-          description="Call or message us for pricing, availability, and site visit scheduling."
-          primaryHref="tel:09333794182"
-          primaryLabel="Call Now"
+          eyebrow="Location"
+          title="Project location and connectivity"
+          description="Explore ANURAG GROUP's prime address in Bidhannagar, Durgapur."
+          primaryHref="/contact"
+          primaryLabel="Book Site Visit"
         />
+        <EventsSection />
         <ContactSection />
       </main>
       <SiteFooter />

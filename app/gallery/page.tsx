@@ -1,4 +1,5 @@
 import ContactSection from "@/contact/contact-section";
+import ConversionWidgets from "@/components/conversion-widgets";
 import PageHero from "@/components/page-hero";
 import SiteFooter from "@/footer/site-footer";
 import GallerySection from "@/gallery/gallery-section";
@@ -8,18 +9,19 @@ export default function GalleryPage() {
   return (
     <div className="bg-[#09090b]">
       <SiteNavbar />
-      <main>
+      <main className="pb-24">
         <PageHero
           eyebrow="Gallery"
-          title="A visual walk through Minari's food, interiors, and celebrations"
-          description="Explore signature dishes, refined dining corners, and the event moments that define the Minari experience."
+          title="Property visuals of ANURAG GROUP"
+          description="Explore project exterior, interior spaces, and the surrounding neighborhood."
           primaryHref="/contact"
-          primaryLabel="Plan a Photoshoot Event"
+          primaryLabel="Book Site Visit"
         />
         <GallerySection />
         <ContactSection />
       </main>
       <SiteFooter />
+      <ConversionWidgets />
     </div>
   );
 }

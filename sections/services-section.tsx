@@ -6,26 +6,25 @@ import Reveal from "@/components/reveal";
 import SectionTitle from "@/components/section-title";
 
 const services = [
-  "Restaurant Dining",
-  "Banquet Hall",
-  "Birthday Parties",
-  "Kitty Party Hosting",
-  "Family Celebrations",
+  "Prime Location",
+  "Quality Construction",
+  "Affordable Pricing",
+  "Trusted by Customers",
 ];
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-[#09090b] py-20 sm:py-24">
+    <section id="why-us" className="bg-[#09090b] py-20 sm:py-24">
       <Container>
         <Reveal>
           <SectionTitle
-            eyebrow="Services"
-            title="Designed for everyday dining and unforgettable celebrations"
-            description="From intimate dinners to joyful party nights, Minari combines warm hospitality with premium ambience."
+            eyebrow="Why Choose Us"
+            title="Built for better living and better value"
+            description="ANURAG GROUP combines prime positioning, dependable build quality, and buyer-first pricing."
           />
         </Reveal>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <Reveal key={service} delay={index * 0.07}>
               <motion.article
@@ -36,7 +35,7 @@ export default function ServicesSection() {
                 <p className="text-xs uppercase tracking-[0.18em] text-zinc-400">0{index + 1}</p>
                 <h3 className="mt-3 font-display text-2xl text-white">{service}</h3>
                 <p className="mt-3 text-sm text-zinc-300">
-                  Curated setup, reliable hosting, and a refined environment built for comfort.
+                  Designed to deliver confidence, convenience, and long-term value for modern homeowners.
                 </p>
                 <div className="mt-6 h-px w-full bg-white/10 transition group-hover:bg-amber-300/70" />
               </motion.article>
