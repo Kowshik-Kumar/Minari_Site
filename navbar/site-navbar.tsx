@@ -6,12 +6,13 @@ import { useState } from "react";
 import Container from "@/components/container";
 
 const navItems = [
-  { label: "Gallery", href: "/gallery" },
-  { label: "Details", href: "/details" },
-  { label: "Location", href: "/location" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "Why Us", href: "/why-us" },
-  { label: "Contact", href: "/contact" },
+  { label: "About", href: "/#about" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Services", href: "/#services" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Trust", href: "/#trust" },
+  { label: "Testimonials", href: "/#reviews" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function SiteNavbar() {
@@ -20,9 +21,9 @@ export default function SiteNavbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <Container className="pt-4">
-        <div className="rounded-2xl border border-white/10 bg-zinc-950/70 px-5 py-3 backdrop-blur-xl">
+        <div className="glass-surface rounded-2xl px-5 py-3">
           <div className="flex items-center justify-between">
-            <Link href="/" className="font-display text-xl text-white sm:text-2xl">
+            <Link href="/" className="font-display text-xl font-semibold tracking-wide text-white sm:text-2xl">
               ANURAG GROUP
             </Link>
 
@@ -31,7 +32,7 @@ export default function SiteNavbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-sm uppercase tracking-[0.14em] text-zinc-300 transition hover:text-white"
+                  className="relative text-sm font-medium uppercase tracking-[0.14em] text-zinc-200/90 transition before:absolute before:-bottom-1.5 before:left-0 before:h-px before:w-0 before:bg-[#e6bd75] before:transition-all hover:text-white hover:before:w-full"
                 >
                   {item.label}
                 </Link>
@@ -47,12 +48,12 @@ export default function SiteNavbar() {
               {open ? "Close" : "Menu"}
             </button>
 
-            <a
-              href="tel:09333794182"
-              className="hidden rounded-full bg-amber-300 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-zinc-950 transition hover:bg-amber-200 md:inline-flex"
+            <Link
+              href="/#contact"
+              className="hidden rounded-full border border-[#edc678]/65 bg-[#edc678]/18 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:-translate-y-0.5 hover:bg-[#edc678]/26 md:inline-flex"
             >
-              Call Now
-            </a>
+              Get Quote
+            </Link>
           </div>
         </div>
       </Container>
@@ -67,18 +68,25 @@ export default function SiteNavbar() {
             className="md:hidden"
           >
             <Container className="pt-2">
-              <div className="rounded-2xl border border-white/10 bg-zinc-950/95 p-4 backdrop-blur-xl">
+              <div className="glass-surface rounded-2xl p-4">
                 <nav className="flex flex-col gap-4">
                   {navItems.map((item) => (
                     <Link
                       key={item.label}
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="text-sm uppercase tracking-[0.16em] text-zinc-200"
+                      className="text-sm uppercase tracking-[0.16em] text-zinc-100"
                     >
                       {item.label}
                     </Link>
                   ))}
+                  <Link
+                    href="/#contact"
+                    onClick={() => setOpen(false)}
+                    className="mt-2 inline-flex items-center justify-center rounded-full border border-[#edc678]/65 bg-[#edc678]/18 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white"
+                  >
+                    Get Quote
+                  </Link>
                 </nav>
               </div>
             </Container>

@@ -1,24 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #09090b;
-  --foreground: #f8f7f3;
-  --panel: #121218;
+  --background: #080b10;
+  --foreground: #f4f1e9;
+  --panel: #111722;
+  --muted: #b6b8bf;
+  --line: rgba(205, 164, 94, 0.22);
+  --accent: #d6a64f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-manrope);
-  --font-display: var(--font-playfair);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-poppins);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-manrope), sans-serif;
-  background-image: radial-gradient(circle at 10% 10%, rgba(251, 191, 36, 0.16), transparent 30%),
-    radial-gradient(circle at 90% 85%, rgba(148, 163, 184, 0.12), transparent 28%);
+  font-family: var(--font-inter), sans-serif;
+  background-image:
+    radial-gradient(circle at 8% 8%, rgba(214, 166, 79, 0.18), transparent 34%),
+    radial-gradient(circle at 88% 86%, rgba(255, 137, 63, 0.1), transparent 32%),
+    linear-gradient(160deg, #080b10 0%, #101722 52%, #171f2b 100%);
+  min-height: 100vh;
 }
 
 html {
@@ -26,9 +32,35 @@ html {
 }
 
 * {
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--line);
 }
 
 .font-display {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+::selection {
+  background: rgba(214, 166, 79, 0.34);
+  color: #1c1404;
+}
+
+.section-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.section-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 28%, rgba(255, 255, 255, 0.01));
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glass-surface {
+  border: 1px solid rgba(214, 166, 79, 0.3);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 22px 55px rgba(5, 7, 11, 0.55);
+  backdrop-filter: blur(12px);
 }
